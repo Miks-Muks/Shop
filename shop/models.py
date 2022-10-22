@@ -16,7 +16,8 @@ class Product(models.Model):
     published_date = models.DateTimeField(verbose_name='дата добавления', auto_now=False)
     price = models.DecimalField(max_digits=5, decimal_places=2)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
-    #image_product = models.ImageField()
+
+    # image_product = models.ImageField()
 
     def __str__(self):
         return self.title
@@ -27,11 +28,7 @@ class Card(models.Model):
     mouth = models.CharField(max_length=2, verbose_name='Mouth', blank=True)
     yeat = models.CharField(max_length=2, verbose_name='Year', blank=True)
     cvc = models.CharField(max_length=3, verbose_name='CVC', blank=True)
-    name = models.CharField(verbose_name='Write your name ')
-
+    name = models.CharField(max_length=20, verbose_name='Write your name ')
 
     def __str__(self):
         return self.name
-
-
-
