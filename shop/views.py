@@ -23,3 +23,6 @@ def card_detail(request, card_pk):
     card = Card.objects.get(pk=card_pk)
     return render(request, 'shop/card detail', { 'card': card})
 
+
+
+
