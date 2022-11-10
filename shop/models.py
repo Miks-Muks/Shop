@@ -16,6 +16,7 @@ class Product(models.Model):
     published_date = models.DateTimeField(verbose_name='дата добавления', auto_now=False)
     price = models.DecimalField(max_digits=5, decimal_places=2)
     category = models.ForeignKey('Category', on_delete=models.CASCADE, related_name='category_name')
+    image = models.ImageField(upload_to='images/')
 
     # image_product = models.ImageField()
 
