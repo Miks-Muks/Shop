@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Product detail</title>
-</head>
-<body>
-    <h1>Develop</h1>
-    <div>
-        {{product.title}}
-        {{product.text}}
-        {{product.create_date}}
-        {{product.price}}
-        {% load static %}
-         <img src="{{product.image.url}}"/>
-    </div>
-</body>
-</html>
+{% extends "shop/base.html" %}
+
+
+        <div>
+            {%block content %}
+            {{product.title}}
+            {{product.text}}
+            {{product.create_date}}
+            {{product.price}}
+            {% load static %}
+            <img src="{{product.image.url}}">{% endblock %}</div>
+
+

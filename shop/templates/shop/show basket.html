@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "shop/base.html" %}
     <div>{{user_basket}}
     {%for i in product%}
         <br>{{i.title}}</br>
@@ -12,5 +6,3 @@
         {{i.price}}
     {% endfor %}
     </div>
-</body>
-</html>
