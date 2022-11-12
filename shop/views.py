@@ -5,7 +5,7 @@ from shop.models import Category, Product, Card, Order, Basket
 # Create your views here.
 def home_page(requests):
     category = Category.objects.all()
-    return render(requests, 'shop/home page.html', {'cat': category})
+    return render(requests, 'shop/base.html', {'cat': category})
 
 
 def product_detail(request, product_pk):
